@@ -1,0 +1,13 @@
+resources:
+- repo: self
+  clean: true
+queue:
+  name: lukillgo
+steps:
+- script: |
+   echo Write your commands here
+   echo ##vso[task.prependpath]C:\Program Files\Git\bin 
+
+- bash: inline |
+   bundle install
+   rake spec 
