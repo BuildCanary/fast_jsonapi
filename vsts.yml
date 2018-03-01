@@ -8,6 +8,6 @@ steps:
    echo Write your commands here
    echo ##vso[task.prependpath]C:\Program Files\Git\bin 
 
-- bash: inline |
+- bash: |
    bundle install
    rake spec 
