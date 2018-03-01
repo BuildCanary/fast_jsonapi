@@ -17,4 +17,4 @@ end
 Oj.optimize_rails
 ActiveModel::Serializer.config.adapter = :json_api
 ActiveModel::Serializer.config.key_transform = :underscore
-ActiveModelSerializers.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new('/dev/null'))
+ActiveModelSerializers.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new((ENV['OS'] == 'Windows_NT') ? 'nul' : '/dev/null'))
