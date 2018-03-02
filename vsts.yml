@@ -9,5 +9,6 @@ steps:
    echo ##vso[task.prependpath]C:\Program Files\Git\bin 
 
 - bash: |
+   gem install bundle
    bundle install
    rake spec 
