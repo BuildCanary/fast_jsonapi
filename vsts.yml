@@ -6,11 +6,7 @@ queue:
 steps:
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '= 2.4'
-
-- script: |
-   echo Write your commands here
-   echo ##vso[task.prependpath]C:\Program Files\Git\bin 
+    versionSpec: '>= 2.4'
 
 - bash: |
    gem install bundle
